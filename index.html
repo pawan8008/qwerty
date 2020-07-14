@@ -1,0 +1,850 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Index</title>
+	<meta name="description" content=""/>
+	<meta name="keywords" content="">
+	<link rel="icon" href="img/favicon.png">
+<meta charset="utf-8">
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+<link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+<link href="css/style.css?v=4.1" type="text/css" rel="stylesheet" />
+<script src="js/jquery-3.3.1.min.js"></script>
+
+
+<!-- cookie start -->
+<script>
+
+	checkCookie();
+	
+	
+function setCookie(cname,cvalue,exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  var expires = "expires=" + d.toGMTString();
+  document.cookie = cname + "=" + cvalue ;
+}
+
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function checkCookie() {
+  var user=getCookie("username");
+  if (user != "") {
+    //alert("Welcome again " + user);
+    
+  } else {
+     user = "0"
+     if (user != "" && user != null) {
+       //setCookie("username", user, 30);
+       var date = new Date();
+date.setTime(date.getTime() + (3 * 1000));
+//$.cookie('username', user, { expires: date });
+setCookie("username", user, date);
+
+	   fun();
+     }
+  }
+}
+
+function fun()
+{
+ $(document).ready(function(){
+        $('#popup').show();
+    });
+}
+</script>
+
+<style>
+    #popup{
+        position: fixed;
+        top:0px;
+        left:0px;
+        z-index: 9999999999999 !important;
+        height:100vh;
+        
+        width:100vw;
+        text-align:center;
+        background:rgba(0,0,0,0.7);
+        display:none;
+    }
+    
+    body.disable{
+        overflow:hidden !important;
+    }
+    
+    #image_container{
+        margin-top:10vh;
+        position:relative;
+    }
+    
+    #image_container span{
+        position:absolute;
+        color:#fff;
+        margin:10px;
+        cursor:pointer;
+        font-size:30px;
+        top:-35px;
+    }
+    
+    .banner_img{
+        height:80vh;
+        //height:40vh;
+    }
+    
+    #popup .closer{
+      height:100%;
+      width:100%;
+      position:absolute;
+      top:0px;
+      left:0px;
+    }
+    
+    #popup.show{
+        display:block !important;
+    }
+    
+    @media (max-width: 768px)
+    {
+        .banner_img{
+            //height:80vh;
+            height:40vh;
+        }
+        #image_container span{
+            right: 2%;
+            top: -55px;
+        }
+        
+    }
+</style>
+<script>
+    $('#popup').hide();
+    $(document).ready(function(){
+        $('#image_container span, #popup .closer').click(function(){
+            $('#popup').hide();
+        });
+        /*$(window).on('unload', function() {
+        //document.cookie = 'username=; expires=Fri, 3 Aug 2012 20:47:11 UTC; path=/'
+        });*/
+        
+        
+    });
+</script>
+
+<!--end cookie-->	
+</head>
+
+<body>
+<div class="main-header" style="position:fixed;top:0;z-index:99;width:100%">
+	<script>
+    function demo()
+    {
+        if(document.frm.name.value=='' || document.frm.mobile.value=='' )
+        {
+            alert('Please fill Information');
+        }
+        else
+        {
+    alert('Thanks for showing your interest, our counselor will contact you.');
+    }
+    }
+    
+    function demo2()
+    {
+        if(document.frm2.name.value=='' || document.frm2.mobile.value=='' )
+        {
+            alert('Please fill Information');
+        }
+        else
+        {
+    alert('Thanks for showing your interest, our counselor will contact you.');
+    }
+    }
+    
+    
+</script>
+	<div class="pre-header">
+		<div class="container">
+			<div class="row">
+				<ul class="col-xs-2 col-sm-4 left-info">
+					<li class="call" id="call-us" onclick="">
+						<span>Call Us:-<a href="tel:9266949494">9266949494</a></span>
+						
+					</li>
+				</ul>
+				<div class="col-xs-10 col-sm-8 info text-right">
+                	<span>Imparting Knowledge since 2000</span> &nbsp;&nbsp;&nbsp;<label style="color: #fff; font-size: 20px;">|</label> 2,000+ Students<span class="last"> &nbsp;&nbsp;&nbsp;<label style="color: #fff; font-size: 20px;"></label>&nbsp;&nbsp;&nbsp; </span>
+                </div>
+				
+			</div>
+		</div>
+	</div><!--pre-header close-->
+
+	 <!--start-->
+<!--	 
+<div id="popup">
+    <div class="closer"></div>
+    <div id="image_container">
+        <img src="img/accounting.jpg" class="banner_img">
+        <span>X</span>
+    </div>
+</div>
+-->
+	<!--end-->	<script type="text/javascript">
+$(function(){
+    var current = location.pathname;
+    current = current.substring(1);
+    
+   //alert(current);
+   
+   
+    $('.menu li a').each(function(){
+        var $this = $(this);
+        // if the current path is like this link, make it active
+        if($this.attr('href').indexOf(current) !== 0){
+            //$this.addClass('active');
+        }
+        else if(current == "")
+        {
+            $("li a.home").addClass('active');
+        }
+        else if(current == "index.php")
+        {
+            $("li a.home").addClass('active');
+        }
+        else if(current == "about.php")
+        {
+            $("li a.about").addClass('active');
+        }
+        else if(current == "gallery.php")
+        {
+            $("li a.gallery").addClass('active');
+        }
+        else if(current == "student.php" || current == "consultant-or-employer.php")
+        {
+            $("li a.placement").addClass('active');
+            
+        }
+        else if(current == "yamuna-vihar.php" || current == "contact.php" || current == "dwarka.php" || current == "kingsway-camp.php" || current == "pitampura.php" || current == "preet-vihar.php" || current == "pusa-road.php" || current == "rajouri-garden.php" || current == "south-extension.php" || current == "yamuna-vihar.php")
+        {
+            $("li a.contact-link").addClass('active');			
+        }
+    
+        else if(current == "e-accouting-gst.php" || current == "tally.php" || current == "tally-advance.php" || current == "busy.php" || current == "busy-advance.php" || current == "marg.php" || current == "e-filling.php" || current == "advance-excel.php" || current == "ms-office.php")
+        {
+            $("li a.course-link").addClass('active');
+        }
+        
+    });
+    
+    if(current == "e-accouting-gst.php"){
+        $("#sub-menu").append('E-Accounting');
+    }
+    else if(current == "tally-advance.php"){
+        $("#sub-menu").append('Tally Advanced');
+    }
+    else if(current == "tally.php"){
+        $("#sub-menu").append('Tally Essentials');
+    }
+    else if(current == "busy.php"){
+        $("#sub-menu").append('Busy Essentials');
+    }
+    else if(current == "busy-advance.php"){
+        $("#sub-menu").append('Busy Advanced');
+    }
+    else if(current == "marg.php"){
+        $("#sub-menu").append('Marg');
+    }
+    else if(current == "e-filling.php"){
+        $("#sub-menu").append('E-Filing');
+    }
+    else if(current == "advance-excel.php"){
+        $("#sub-menu").append('Advance Excel');
+    }
+    else if(current == "ms-office.php"){
+        $("#sub-menu").append('MS Office');
+    }
+    else if(current == "contact.php"){
+        $("#sub-menu-center").append('All Centers');
+    }
+    else if(current == "pitampura.php"){
+        $("#sub-menu-center").append('Pitampura');
+    }
+    else if(current == "yamuna-vihar.php"){
+        $("#sub-menu-center").append('Yamuna Vihar');
+    }
+    else if(current == "preet-vihar.php"){
+        $("#sub-menu-center").append('Preet Vihar');
+    }
+    else if(current == "kingsway-camp.php"){
+        $("#sub-menu-center").append('Kingsway Camp');
+    }
+    else if(current == "pusa-road.php"){
+        $("#sub-menu-center").append('Pusa Road');
+    }
+    else if(current == "dwarka.php"){
+        $("#sub-menu-center").append('Dwarka');
+    }
+    else if(current == "rajouri-garden.php"){
+        $("#sub-menu-center").append('Rajouri Garden');
+    }
+    else if(current == "south-extension.php"){
+        $("#sub-menu-center").append('South Extension');
+    }
+    else if(current == "student.php"){
+        $("#sub-menu-placement").append('Student');
+    }
+    else if(current == "consultant-or-employer.php"){
+        $("#sub-menu-placement").append('Consultant or Employer');
+    }
+    
+});
+</script>
+
+<div class="header">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-8 col-sm-3 logo">
+					<a href="index.php">
+						<img src="img/logo.png?v=1.1" alt="" />
+					</a>
+				</div>
+				
+				<div class="col-xs-4 col-sm-9 menu">
+					<div class="menu-icon">MENU</div>
+					<ul>
+						<li class="close-menu">Close</li>
+						<li><a class="home" href="index.html">Home</a></li>
+						<li><a class="about" href="about.html">About Us</a></li>
+						<li>
+							<a class="course-link parent-menu" href="javascript:void(0);">Courses</a>
+							<span class="orange" style="top: 35px; position: absolute; left: 0px; white-space: nowrap; font-size: .75em; color: #ffdd21;"><span id="sub-menu"></span></span>
+							<ul class="sub-menu">
+								<li><a class="" href="e-accouting-gst.html">E-Accounting</a></li>
+								<li><a class="" href="tally.html">Tally Essentials</a></li>
+								<li><a class="" href="tally-advance.html">Tally Advanced</a></li>
+								<li><a class="" href="e-filling.html">E-Filing</a></li>
+								<li><a class="" href="advance-excel.html">Advance Excel</a></li>
+								<li><a class="" href="ms-office.html">MS Office - CCC</a></li>
+                                <li><a class="" href="C.html">C, C++</a></li>
+                                <li><a class="" href="auto-cad.html">Auto CAD</a></li>
+                                <li><a class="" href="pagemaker.html">Adobe PageMaker</a></li>
+                                <li><a class="" href="photoshop.html">Adobe Photoshop</a></li>
+                                <li><a class="" href="corel-draw.html">Corel Draw</a></li>
+                                <li><a class="" href="typing.html">Typing</a></li>
+                                <li><a class="" href="computer-hardware-networking.html">Computer Hardware Networking</a></li>
+							</ul>
+						</li>
+						<li><a class="gallery" href="gallery.html">Gallery</a></li>
+						
+						<li class="last">
+						    <a href="contact.html">Contact Us</a>
+						    <span class="orange" style="top: 35px; position: absolute; left: 0px; white-space: nowrap; font-size: .75em; color: #ffdd21;"><span id="sub-menu-center"></span></span>
+						    
+						 </li>
+					</ul>
+				</div>
+			</div>
+		</div><!--container close-->
+	</div><!--header close--></div><!--main header close-->
+<div class="">
+<div class="banner home-banner">
+	<img src="img/banner.jpg" alt="" />
+<!--<div class="home-banner-content">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-md-7 banner-content">
+					<h1 class="text-right">Accounting is the language of business <br class="hidden-xs" /></h1>
+					<h1 class="text-right">"Warren Buffett"</h1>
+				</div>
+				<div class="col-sm-6 col-md-5">
+					<div class="banner-points">
+	
+						<div class="box ace">
+							<h4>Learning Resources</h4>
+							<p><b>State of the art courseware and lab facilities </b></p>
+						</div>
+						<div class="box career">
+							<h4>Training Methodology </h4>
+							<p><b>Empirical methodology by experienced trainers	</b></p>
+						</div>
+						<br>
+							<div class="box communication">
+							<h4>Esteemed Certifications</h4>
+							<p><b>Training and Certification of Tally, Busy, Webtel, E-Accounting, GST, Advance Excel.</b>.</p>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>--><!--home-banner-content close-->
+	<div class="scroll-bottom">
+		<a href="#courses" class="easyscroll">Scroll to bottom</a>
+	</div>
+</div><!--banner close-->
+</div>
+
+<div class="section bottom-shadow" id="courses">
+	<div class="container">
+		<h2 class="text-center">Our DNA</h2>
+		<p class="text-justify">The <strong>ICT computer was established in 2000</strong>. It is one of the pioneer education institutes in india and has been revolutionizing the it education with innovative and affordable it courses. For about a decade it has successfully changed many lives by empowering young people.
+ICT computers is in constant pursuit of excellence in the sector of computer education and hence has enough record of creating winners. Over the years the institute has bagged up plenty of goodwill from their students and therefore this asset along with the highly skilled trainers and multimedia professionals has been able to create solid trust among people.
+</p>
+		
+	</div>
+</div>
+
+
+<div class="section text-center med-mar-bt">
+	<div class="container">
+		<h2>COURSES</h2>
+		<div class="row">
+			<div class="col-sm-6 col-md-4">
+				<div class="course-block text-center">
+				   <img src="img/e-accouting-thumb.jpg" alt="E-Accounting and GST" />
+				   <h3>E-Accounting and GST</h3>
+				   <div class="hover-info">
+					  <div class="d-table">
+						 <div class="d-cell">
+							<a href="e-accouting-gst.php" class="link-overlay"></a>
+							<h3>E-Accounting and GST</h3>
+							<p>Learn topics in Accounting ranging from Accounting Principles to Computerized Accounting, Direct and Indirect Tax to Online Return Filing and Basic Mathematics to fundamentals of Stock Market and Forex Market.</p>
+						 </div>
+					  </div>
+				   </div>
+				</div><!--course block close-->
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<div class="course-block text-center">
+				   <img src="img/tally-thumb.jpg" alt="Tally" />
+				   <h3>Tally Essentials</h3>
+				   <div class="hover-info">
+					  <div class="d-table">
+						 <div class="d-cell">
+							<a href="tally.php" class="link-overlay"></a>
+							<h3>Tally Essentials</h3>
+							<p>Accounting in Tally with GST entries</p>
+							<p>Knowledge of Accounting is a prerequisite</p>
+						 </div>
+					  </div>
+				   </div>
+				</div><!--course block close-->
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<div class="course-block text-center">
+				   <img src="img/tally-advance-thumb.jpg" alt="Tally" />
+				   <h3>Tally Advanced</h3>
+				   <div class="hover-info">
+					  <div class="d-table">
+						 <div class="d-cell">
+							<a href="tally-advance.php" class="link-overlay"></a>
+							<h3>Tally Advanced</h3>
+							<p>Principles of Accounting</p>
+							<p>Advanced accounting in Tally with GST</p>
+							<p>Training with Tally Certificatione</p>
+						 </div>
+					  </div>
+				   </div>
+				</div><!--course block close-->
+			</div>			
+			<div class="col-sm-6 col-md-4">
+				<div class="course-block text-center">
+				   <img src="img/income-tax-thumb.jpg" alt="E-Filing" />
+				   <h3>E-Filing</h3>
+				   <div class="hover-info">
+					  <div class="d-table">
+						 <div class="d-cell">
+							<a href="e-filling.php" class="link-overlay"></a>
+							<h3>E-Filing</h3>
+							<p>Online Return Filing of GST, Income Tax and TDS
+Computerised Accounting knowledge is a prerequisite</p>
+						 </div>
+					  </div>
+				   </div>
+				</div><!--course block close-->
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<div class="course-block text-center">
+				   <img src="img/excel-thumb.jpg" alt="Advance Excel" />
+				   <h3>Advance Excel </h3>
+				   <div class="hover-info">
+					  <div class="d-table">
+						 <div class="d-cell">
+							<a href="advance-excel.php" class="link-overlay"></a>
+							<h3>Advance Excel</h3>
+							<p>Oxford- An Authorised Microsoft Cloud Campus Partner</p>
+                            <p>Advanced Excel for job opportunities and career growth</p>
+						 </div>
+					  </div>
+				   </div>
+				</div><!--course block close-->
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<div class="course-block text-center">
+				   <img src="img/ms-office-thumb.jpg?v=1" alt="MS Office" />
+				   <h3>Microsoft Office - CCC</h3>
+				   <div class="hover-info">
+					  <div class="d-table">
+						 <div class="d-cell">
+							<a href="ms-office.php" class="link-overlay"></a>
+							<h3>Microsoft Office - CCC</h3>
+							<p>Oxford- Authorised Microsoft Cloud Campus Partner</p>
+							<p>An indispensable course for the novice in Computers</p>
+							<p><strong>Authorised Nielit Centre</strong></p>
+						 </div>
+					  </div>
+				   </div>
+				</div><!--course block close-->
+			</div>
+            <div class="col-sm-6 col-md-4">
+				<div class="course-block text-center">
+				   <img src="img/c-thumb.jpg" alt="E-Filing" />
+				   <h3>C, C++</h3>
+				   <div class="hover-info">
+					  <div class="d-table">
+						 <div class="d-cell">
+							<a href="e-filling.php" class="link-overlay"></a>
+							<h3>C, C++</h3>
+							<p>Online Return Filing of GST, Income Tax and TDS
+Computerised Accounting knowledge is a prerequisite</p>
+						 </div>
+					  </div>
+				   </div>
+				</div><!--course block close-->
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<div class="course-block text-center">
+				   <img src="img/autocad-thumb.jpg" alt="Advance Excel" />
+				   <h3>Auto CAD </h3>
+				   <div class="hover-info">
+					  <div class="d-table">
+						 <div class="d-cell">
+							<a href="advance-excel.php" class="link-overlay"></a>
+							<h3>Auto CAD</h3>
+							<p>Oxford- An Authorised Microsoft Cloud Campus Partner</p>
+                            <p>Advanced Excel for job opportunities and career growth</p>
+						 </div>
+					  </div>
+				   </div>
+				</div><!--course block close-->
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<div class="course-block text-center">
+				   <img src="img/pagemaker-thumb.jpg" alt="MS Office" />
+				   <h3>Adobe PageMaker</h3>
+				   <div class="hover-info">
+					  <div class="d-table">
+						 <div class="d-cell">
+							<a href="ms-office.php" class="link-overlay"></a>
+							<h3>Adobe PageMaker</h3>
+							<p>Oxford- Authorised Microsoft Cloud Campus Partner</p>
+							<p>An indispensable course for the novice in Computers</p>
+							<p><strong>Authorised Nielit Centre</strong></p>
+						 </div>
+					  </div>
+				   </div>
+				</div><!--course block close-->
+			</div>
+            <div class="col-sm-6 col-md-4">
+				<div class="course-block text-center">
+				   <img src="img/photoshop-thumb.jpg" alt="E-Filing" />
+				   <h3>Adobe Photoshop</h3>
+				   <div class="hover-info">
+					  <div class="d-table">
+						 <div class="d-cell">
+							<a href="e-filling.php" class="link-overlay"></a>
+							<h3>Adobe Photoshop</h3>
+							<p>Online Return Filing of GST, Income Tax and TDS
+Computerised Accounting knowledge is a prerequisite</p>
+						 </div>
+					  </div>
+				   </div>
+				</div><!--course block close-->
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<div class="course-block text-center">
+				   <img src="img/coreldraw-thumb.jpg" alt="Advance Excel" />
+				   <h3>CorelDRAW</h3>
+				   <div class="hover-info">
+					  <div class="d-table">
+						 <div class="d-cell">
+							<a href="advance-excel.php" class="link-overlay"></a>
+							<h3>CorelDRAW</h3>
+							<p>Oxford- An Authorised Microsoft Cloud Campus Partner</p>
+                            <p>Advanced Excel for job opportunities and career growth</p>
+						 </div>
+					  </div>
+				   </div>
+				</div><!--course block close-->
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<div class="course-block text-center">
+				   <img src="img/typing-thumb.jpg" alt="MS Office" />
+				   <h3>Typing</h3>
+				   <div class="hover-info">
+					  <div class="d-table">
+						 <div class="d-cell">
+							<a href="ms-office.php" class="link-overlay"></a>
+							<h3>Typing</h3>
+							<p>Oxford- Authorised Microsoft Cloud Campus Partner</p>
+							<p>An indispensable course for the novice in Computers</p>
+							<p><strong>Authorised Nielit Centre</strong></p>
+						 </div>
+					  </div>
+				   </div>
+				</div><!--course block close-->
+			</div>
+            <div class="col-sm-6 col-md-4">
+				<div class="course-block text-center">
+				   <img src="img/hardware-thumb.jpg" alt="MS Office" />
+				   <h3>Computer hardware Networking</h3>
+				   <div class="hover-info">
+					  <div class="d-table">
+						 <div class="d-cell">
+							<a href="ms-office.php" class="link-overlay"></a>
+							<h3>Computer hardware Networking</h3>
+							<p>Oxford- Authorised Microsoft Cloud Campus Partner</p>
+							<p>An indispensable course for the novice in Computers</p>
+							<p><strong>Authorised Nielit Centre</strong></p>
+						 </div>
+					  </div>
+				   </div>
+				</div><!--course block close-->
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="section testimonials">
+	<div class="container">
+		<h2>Listen from our proud students</h2>
+		<div class="slider testimonial-slider">
+			<div>
+				<div class="student-container">
+					<p class="col-md-8 col-md-offset-2">I have attended E-Accounting course and so far I have been very satisfied. Course content is excellent. All presentations are very good. Other facilities like equipment is also provided in abundance.Thank you ICT.</p>
+					<div class="clearfix"></div>
+					<div class="student-info">
+						<p><strong>Himanshi Bhatt</strong></p>
+						<img src="img/student-Himanshi-bhatt.png" alt="Himanshi Bhatt" />
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="student-container">
+					<p class="col-md-8 col-md-offset-2">I completed my GST classes from this institute and the facilities were very good. All faculties were very informed and encouraging. The environment promoted learning. I’d definitely recommend this place.</p>
+					<div class="clearfix"></div>
+					<div class="student-info">
+						<p><strong>Satish Kumar</strong></p>
+						<img src="img/student-satish.png" alt="Satish Kumar" />
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="student-container">
+					<p class="col-md-8 col-md-offset-2">ICT institute is the best option for students. They have the best faculties. I’d suggest that  students must try visiting here and take the admission. The staff is also very helpful.</p>
+					<div class="clearfix"></div>
+					<div class="student-info">
+						<p><strong>Rinki Kumari</strong></p>
+						<img src="img/student-Rinki.png" alt="Rinki Kumari" />
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="student-container">
+					<p class="col-md-8 col-md-offset-2">The teaching style is very good and facilites in classrooms are satisfactory. Faculties are professionals, helpful and overall, the environment is good. The equipment is in good condition and comes in useful.</p>
+					<div class="clearfix"></div>
+					<div class="student-info">
+						<p><strong>Deepa Budha</strong></p>
+						<img src="img/student-deepa.png" alt="Deepa Budha" />
+					</div>
+				</div>
+			</div>
+			
+			<div>
+				<div class="student-container">
+					<p class="col-md-8 col-md-offset-2">My course was thoroughly covered by our amazing faculty. The methodology was interesting and it enhanced learning. The ambience is very warm. I’d love to study more courses in future.</p>
+					<div class="clearfix"></div>
+					<div class="student-info">
+						<p><strong>Aashkara Khan</strong></p>
+						<img src="img/student-aashkara.png" alt="Aashkara Khan" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div><!--testimonials close-->
+
+
+<div class="section text-center med-mar-bt bottom-shadow">
+	<div class="container">
+		<h2 class="no-margin-bt">OUR TRAINING/ASSESSMENT PARTNERS*</h2>
+		<p><small>Select courses/programs/partner at select centres.</small></p>
+		<div class="slider partners">
+			<div>
+				<div class="img-box"><img src="img/partner-1.jpg" alt="" /></div>
+			</div>
+			<div>
+				<div class="img-box"><img src="img/partner-10.jpg" alt="" /></div>
+			</div>
+			<div>
+				<div class="img-box"><img src="img/partner-2.jpg" alt="" /></div>
+			</div>
+			<div>
+				<div class="img-box"><img src="img/partner-3.jpg" alt="" /></div>
+			</div>
+			<div>
+				<div class="img-box"><img src="img/partner-4.jpg" alt="" /></div>
+			</div>
+			<div>
+				<div class="img-box"><img src="img/partner-5.jpg" alt="" /></div>
+			</div>
+			<div>
+				<div class="img-box"><img src="img/partner-6.jpg" alt="" /></div>
+			</div>
+			<div>
+				<div class="img-box"><img src="img/partner-7.jpg" alt="" /></div>
+			</div>
+			<div>
+				<div class="img-box"><img src="img/partner-8.jpg" alt="" /></div>
+			</div>
+			<div>
+				<div class="img-box"><img src="img/partner-9.jpg" alt="" /></div>
+			</div>
+		</div>
+	</div>
+</div><!--Activities close-->
+
+<div class="section text-center">
+	<div class="container">
+		<h2>JOIN US TODAY AND SET SAIL FOR A REMARKABLE CAREER</h2>
+		<h4>For more information </h4>
+		<a href="broucher.pdf" target="_blank" class="button">DOWNLOAD BROCHURE</a>
+	</div>
+</div>
+
+<div class="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-4">
+				<h3><span>Courses</span></h3>
+				<div class="row">
+				    <div class="col-md-6">
+				        <ul class="quick">
+                			<li><a href="e-accouting-gst.html">E-Accounting</a></li>
+        					<li><a href="tally.html">Tally Essentials</a></li>
+        					<li><a href="tally-advance.html">Tally Advanced</a></li>
+        					<li><a href="busy.html">Busy Essentials</a></li>
+        					<li><a href="busy-advance.html">Busy Advanced</a></li>
+        				</ul>
+				    </div>
+				    <div class="col-md-6">
+				        <ul class="quick">
+                			<li><a href="marg.html">Marg</a></li>
+        					<li><a href="e-filling.html">E-Filing</a></li>
+        					<li><a href="advance-excel.html">Advance Excel</a></li>
+        					<li><a href="ms-office.html">MS Office - CCC</a></li>
+        				</ul>
+				    </div>
+				</div>
+			</div>
+			<div class="col-sm-4 about">
+				<h3><span>About Us</span></h3>
+				<p>ICT COMPUTER is an ISO 9001-2005 Certified IT training institute . We provide best computer training in software, hardware and multimedia fields. Our courses are specially designed and updated as per the current market needs as well as different student level which makes us a best it training institute in delhi.</p>
+			</div>
+			
+			
+			
+			<div class="col-sm-4">
+				<h3><span>Course Enquiry</span></h3>
+				
+				
+				<form  method="post"  action="contact-form-handler.php"  name="frm"  enctype="multipart/form-data">
+<div class="field">
+<input type="text" id="name" name="name" placeholder="Your Name" required oninvalid="this.setCustomValidity('Please enter your Full name')" oninput="setCustomValidity('')">
+</div>
+<div class="field">
+<input type="tel" id="tel" name="mobile" placeholder="Your Number" required pattern="[0-9]{10}" oninvalid="setCustomValidity('Please enter your 10-digit Mobile number')" onchange="try{setCustomValidity('')}catch(e){}">
+</div>
+<div class="field">
+<input type="text" id="name" name="email" placeholder="Your Email" required oninvalid="this.setCustomValidity('Please enter your Email')" oninput="setCustomValidity('')">
+</div>
+
+<div class="field">
+<select name="course" class="course" required placeholder="Select a Course" oninvalid="this.setCustomValidity('Please select a Course from list')" oninput="setCustomValidity('')">
+<option value="">Select a Course</option>
+<option value="E-Accouting">E-Accouting</option>
+<option value="Tally Essentials">Tally Essentials</option>
+<option value="Tally Advanced">Tally Advanced</option>
+<option value="Busy Essentials">Busy Essentials</option>
+<option value="Busy Advanced">Busy Advanced</option>
+<option value="Marg">Marg</option>
+<option value="E-Filing">E-Filing</option>
+<option value="Advance Excel">Advance Excel</option>
+<option value="MS Office - CCC">MS Office - CCC</option>
+</select>
+</div>
+<div class="field no-margin-bt">
+<input type="submit" class="submi" />
+
+<style>
+.submi{
+border:none; background:#fff; color:#263d6a; font-size:18px; font-weight:600; text-transform:uppercase; width:100%; padding:15px; line-height:1;
+}
+</style>
+</div>
+</form>
+				<div class="modal fade" id="modalthanks" role="dialog">
+                    <div class="modal-dialog">
+                      <div class="modal-content" style="padding: 20px 0 10px 0">
+                        <div class="modal-body text-center">
+                          <p style="font-size: 18px; margin-bottom: 20px; color: #000;">Thanks for showing interest, Our Counselor will contact you</p>
+                <button type="button" class="btn btn-default" data-dismiss="modal" style="padding: 10px 20px;">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+			</div>
+		</div>
+	</div>
+	<div class="copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 text-center">
+					<p>Copyright &copy; 2000 ictcomputers.in</p>
+						<p class="v-small"><small>** All certifications, products, logos  and company names are trademarks or registered trademarks of their respective holders. All certification exams are subject to availability and are subject to change or completely removed without prior notice. We do not ensure that participation in any of the above will result in successful completion of the certification/examination. Also the student needs to pay the respective examination fee for certification for every attempt.</small></p>
+				</div>
+				
+			</div>
+		</div>
+	</div><!--copyright close-->
+</div><!--footer close-->
+
+<div class="m-sticky-btn">
+    <a href="broucher.pdf" target="_blank"><img src="broucher.pdf" alt="" /></a>
+</div>
+
+<script src="js/slick.min.js"></script>
+<script src="js/custom.js?v=2.11"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/modal.js"></script>
+
+
+
+</html></body>
+</html>
